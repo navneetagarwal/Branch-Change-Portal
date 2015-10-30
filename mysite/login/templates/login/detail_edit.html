@@ -1,0 +1,9 @@
+{% extends "login/base.html" %}
+
+{% block content %}
+	<h1 style="text-decoration:underline;">Edit your details:</h1><br>
+	<form method="POST" class="post-form">{% csrf_token %}
+		{{ form.as_p }}
+		<button type="submit" class="save btn btn-default">Save</button>
+	</form>
+{% endblock content %}
