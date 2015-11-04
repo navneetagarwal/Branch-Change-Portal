@@ -1,0 +1,118 @@
+	{% extends "login/base.html" %}
+{% load set_var %}
+
+{% block content %}
+	{% with 0 as name %}
+		{% for detail in details %}
+			{% if detail.author == user %}
+				{% set name = 1 %}
+				<div class="warning">
+					{% if detail.Category == 'GE' %}
+						{% if detail.CPI < 8 %}
+						<p style="font-size: 20px; color:red; padding-top:10px;">WARNING!!!</p>
+						<p>You are not eligible for change in branch</p>
+						{% endif %}
+					{% endif %}
+					{% if detail.Category == 'OBC' %}
+						{% if detail.CPI < 8 %}
+						<p style="font-size: 20px; color:red; padding-top:10px;">WARNING!!!</p>
+						<p>You are not eligible for change in branch</p>
+						{% endif %}
+					{% endif %}
+					{% if detail.Category == 'SC' %}
+						{% if detail.CPI < 7 %}
+						<p style="font-size: 20px; color:red; padding-top:10px;">WARNING!!!</p>
+						<p>You are not eligible for change in branch</p>
+						{% endif %}
+					{% endif %}
+					{% if detail.Category == 'ST' %}
+						{% if detail.CPI < 7 %}
+						<p style="font-size: 20px; color:red; padding-top:10px;">WARNING!!!</p>
+						<p>You are not eligible for change in branch</p>
+						{% endif %}
+					{% endif %}
+				</div>
+				<div class="detail">	
+					<div class="Name">
+						<h1>Your Personal Details</h1>
+						<h2>Name - {{ detail.Name }}</h2>
+						<h2>Roll No - {{ detail.RollNo }}</h2>
+						<h2>Present Branch - {{ detail.Current_Branch }}</h2>
+						<h2>CPI - {{ detail.CPI }}</h2>
+						<h2>Category - {{ detail.Category }}</h2>	
+					</div>
+					<div style="float:left;">
+					<h1>Your Preference List {% if user.is_authenticated %}</h1>
+							<a class="btn btn-default" href="{% url "detail_edit" pk=detail.pk %}" style = "float:right; margin-right:20px; margin-top:10px;"><span class="glyphicon glyphicon-pencil"></span></a>
+						{% else %}
+							<a href="{% url "django.contrib.auth.views.login" %}" class="top-menu"><span class="glyphicon glyphicon-lock"></span></a>
+						{% endif %}	
+					<div class="preference">
+					<p>Preference 1 - {{ detail.Preference1 }} </p>
+					{% if detail.Preference2 != 'null' %}
+						<p>Preference 2 - {{ detail.Preference2 }} </p>
+						{% if detail.Preference3 != 'null' %}
+							<p>Preference 3 - {{ detail.Preference3 }} </p>
+							{% if detail.Preference4 != 'null' %}
+								<p>Preference 4 - {{ detail.Preference4 }} </p>
+								{% if detail.Preference5 != 'null' %}
+									<p>Preference 5 - {{ detail.Preference5 }} </p>
+									{% if detail.Preference6 != 'null' %}
+										<p>Preference 6 - {{ detail.Preference6 }} </p>
+										{% if detail.Preference7 != 'null' %}
+											<p>Preference 7 - {{ detail.Preference7 }} </p>
+											{% if detail.Preference8 != 'null' %}
+												<p>Preference 8 - {{ detail.Preference8 }} </p>
+												{% if detail.Preference9 != 'null' %}
+													<p>Preference 9 - {{ detail.Preference9 }} </p>
+													{% if detail.Preference10 != 'null' %}
+														<p>Preference 10 - {{ detail.Preference10 }} </p>
+														{% if detail.Preference11 != 'null' %}
+															<p>Preference 11 - {{ detail.Preference11 }} </p>
+															{% if detail.Preference12 != 'null' %}
+																<p>Preference 12 - {{ detail.Preference12 }} </p>
+																{% if detail.Preference13 != 'null' %}
+																	<p>Preference 13 - {{ detail.Preference13 }} </p>
+																	{% if detail.Preference14 != 'null' %}
+																		<p>Preference 14 - {{ detail.Preference14 }} </p>
+																		{% if detail.Preference15 != 'null' %}
+																			<p>Preference 15 - {{ detail.Preference15 }} </p>
+																			{% if detail.Preference16 != 'null' %}
+																				<p>Preference 16 - {{ detail.Preference16 }} </p>
+																			{% endif %}
+																		{% endif %}
+																	{% endif %}
+																{% endif %}
+															{% endif %}
+														{% endif %}
+													{% endif %}
+												{% endif %}
+											{% endif %}
+										{% endif %}
+									{% endif %}
+								{% endif %}
+							{% endif %}
+						{% endif %}
+					{% endif %}
+					</div>
+				</div>
+				</div>
+			{% endif %}
+			{% if detail.RollNo == '150000000' %}
+				{% if name == 0 %}
+					<p style="font-family:verdana; font-size:20px;">You seem to be a new user. <br>Please fill in your personal details by clicking on the plus sign -</p>
+					<a href="{% url "detail_new" %}"><span class="glyphicon glyphicon-plus"></span></a>
+					<br>
+				{% endif %}
+			{% endif %}
+		{% endfor %}
+		
+		<!-- {% if name == 0 %}
+			<div class="detail">
+				<p>You haven't registered yet. Click on the plus sign at the top right</p>
+			</div>
+		{% endif %} -->
+	{% endwith %}
+	
+	
+{% endblock content %}

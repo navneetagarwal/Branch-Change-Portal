@@ -1,0 +1,122 @@
+body {
+	padding-left: 15px;
+}
+
+.page-header {
+	background-color: #66CC33;
+	margin-top: 0;
+	padding: 20px 20px 20px 40px;
+	border-bottom-left-radius: 15px;
+}
+
+.page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
+	color: #D2FFA7;
+	font-size: 36pt;
+	text-decoration: none;
+}
+
+.content {
+	margin-left: 40px;
+}
+
+h1, h2, h3, h4 {
+	font-family: 'Abril Fatface';
+}
+
+.Name {
+	float: right;
+	color: #000000;
+	padding-right: 80px;
+}
+
+.Name h1, .detail h1, .greenheader {
+	color: #D2FFA7;
+	margin-top: 5px;
+	border-radius: 5px;
+	padding: 2px;
+	padding-left: 10px;
+	background-color: #66CC33;
+	padding-right: 20px;
+}
+
+.Name h2 {
+	padding-left: 20px;
+}
+
+.save {
+	float: left;
+	margin-left: 280px;
+	margin-bottom: 50px;
+}
+
+.detail-form textarea, .detail-detail input {
+	width: 100%;
+}
+
+.top-menu, .top-menu:hover, .top-menu:visited, .top-menu a {
+	color: #D2FFA7;
+	float: right;
+	font-size: 26pt;
+	margin-right: 20px;
+	padding-top: 25px;
+	font-family: 'Abril Fatface'
+}
+
+.detail {
+	margin-bottom: 70px;
+	margin-top: 10px;
+}
+
+.detail h1 a, .detail h1 a:visited {
+	color: #66CC33;
+}
+
+.pref-form textarea, .pref-detail input {
+	width: 100%;
+}
+
+.pref {
+	margin-bottom: 70px;
+}
+
+.pref h1 a, .pref h1 a:visited {
+	color: #66CC33;
+}
+
+.warning {
+	color: black;
+	font-size: 32px;
+	font-weight: bold;
+	font-family: verdana;
+	border:1px;
+	background-color: #B2E599;
+	border-radius: 10px;
+	border:2px solid red;
+}
+
+.warning p {
+	padding-left: 20px;
+}
+
+.post-form {
+	padding-left: 20px;
+}
+
+.glyphicon.glyphicon-plus {
+    font-size: 50px;
+    padding-left: 45px;
+}
+
+.instruction {
+	font-family:verdana;
+	/*font-size: 12px;*/
+}
+
+.preference {
+	padding-left:20px;
+}
+
+.preference p{
+	font-family:verdana;
+	font-size: 16px;
+}

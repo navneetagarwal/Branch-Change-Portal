@@ -1,0 +1,31 @@
+{% extends "login/base.html" %}
+
+{% block content %}
+	<div class="detail">
+		{% if detail.Name %}
+			<div class="Name">
+				<h1>{{ detail.Name }}</h1>
+			</div>
+		{% endif %}
+		<p>Roll No - {{ detail.RollNo }}</p>
+		<p>Current Branch - {{ detail.Current_Branch }}</p>
+		<p>CPI - {{ detail.CPI }}</p>
+		<p>Category - {{ detail.Category }}</p>
+		<p>Preference 1 - {{ detail.Preference1 }} </p>
+		<p>Preference 2 - {{ detail.Preference2 }} </p>
+		<p>Preference 3 - {{ detail.Preference3 }} </p>
+		<p>Preference 4 - {{ detail.Preference4 }} </p>
+		<p>Preference 5 - {{ detail.Preference5 }} </p>
+		<p>Preference 6 - {{ detail.Preference6 }} </p>
+		<p>Preference 7 - {{ detail.Preference7 }} </p>
+		<p>Preference 8 - {{ detail.Preference8 }} </p>
+		<p>Preference 9 - {{ detail.Preference9 }} </p>
+		<p>Preference 10 - {{ detail.Preference10 }} </p>
+		<p>Preference 11 - {{ detail.Preference11 }} </p>
+		<p>Preference 12 - {{ detail.Preference12 }} </p>
+		<p>Preference 13 - {{ detail.Preference13 }} </p>
+		<p>Preference 14 - {{ detail.Preference14 }} </p>
+		<p>Preference 15 - {{ detail.Preference15 }} </p>
+		<p>Preference 16 - {{ detail.Preference16 }} </p>
+	</div>
+{% endblock content %}

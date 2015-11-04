@@ -1,0 +1,2 @@
+Test case to show people with same Cpi enter irrespective of the strength exceeding
+
