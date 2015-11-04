@@ -1,0 +1,14 @@
+Implementation:
+We could not get time to code the whole implementation. we will just write in this docunment how to implement. This document explains all the corner cases we could find in the challenge part and how to code it up.
+
+Challenge algorithm
+1. Maintain two queues for each department. First queue contains the candidates (sorted in CPI order) who weren't able to change to this (more preferred branch) branch due upper limit of this branch. Second queue is for the candidates who can't move to this (more preferred) branch due to lower limit of their branch
+2. After each iteration we check the branch capacity. If any branch is in valid capacity range, We check the two queues:
+Case 1: Same CPI.
+  We will allow both the people into the branch
+  Case 2: Lower Limit has Higher CPI
+  We check if that person's branch still has capacity crunch. If it has then we check if that branch has any of the queues filled. If any queue is filled, we iterate through the queue whose first person CPI is higher based on the criteria. We recursively check this function. While we visit a branch we store the visited status. If we return to a ranch which was visited we have a cycle. We allow all those people in the cycle
+  Case 3: Upper Limit has higher CPI
+  	We add the person after checking his branch details initially itself and return the function
+
+Implement it after the recursion function is called in the loop itself
