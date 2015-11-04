@@ -2,10 +2,11 @@
 
 Assignment 11 :
 Group No: 02
-Team Members:		CSE ID		Roll No.	Percentage Contribution
-Harshal Mahajan		harshal.m	140050003	100%
-Tanmay Parekh  		tanmayb         140100011	100%
-Navneet Agarwal		navneet		140100090	100%
+
+|Team Members:|		CSE ID|		Roll No.|	Percentage Contribution|
+|Harshal Mahajan|	harshal.m|	140050003|	100%|
+|Tanmay Parekh|		tanmayb|        140100011|	100%|
+|Navneet Agarwal|	navneet|	140100090|	100%|
 
 
 Honor Code: 
