@@ -1,0 +1,97 @@
+Features Implemented in our project:
+
+1) Feature : Login and Authentication has been implemented in the WebApp using the built in Django framework. Only registered users can sign into the portal. The page shows the error of wrong password or username if the user does a mistake. The required entities are username and password .
+
+	a)Even if a user tries to access another user's form through his url then also it asks for his password ensuring proper authentication
+
+
+2) Feature : And if a user wants to sign in and is not registered then we also have implemented the signup feature for that purpose. The required entities are username ,password and firstname(optional to write it).
+
+	---Test Cases:
+	a) If the user forgets to add username then error is given on submission
+
+	b) If the user forgets to add password then error is given on submission
+
+	c)Its optional for the user to add firstname
+
+
+3)Feature : When the user logs into the portal the thing he sees is the list of his details.Only for the first time do we ask a user to put in the details by clicking on a sign which redirects to the edit page.
+
+4)Feature : Greeting the user
+	a)When the user logs in we have Hello 'username' to greet the user
+
+5)Feature : Logout for the user has been implemented .It redirects the user at any point of time to the initial login page
+
+6)Feature : When the user puts in the Roll Number then it is checked whether it is present in the input file given to us and correspondingly given a validation error.
+
+
+7)Feature : The RollNo is checked for correctness. It only accepts roll numbers starting with 15 and having atleat 8 digits and length 9 because it might be a dual degree roll number.
+	---Test Cases:
+	a)If the roll number is not present in the input file given to us for verification then a corresponding validation error is given after pressing the save button
+
+	b)If the roll number doesn't start with 15 then validation error is given after pressing the save button
+
+	c)If the length of roll no doesn't match 9 then error is given after clicking on save button
+
+	d)If it contains string characters other than the D for dual degree it will show a validation error after clicking the save button.
+
+
+8)Feature : The CPI is checked for correctness. 
+
+	---Test Cases:
+	a)If the CPI corresponding to roll number is wrong according to the input file then the error is raised after clicking on save button
+
+	b)A check on CPI has been kept so that it can not exceed 10  neither can it go below 0
+
+9)Feature : Category Warning for ineligible candidates.
+
+	---Test Cases:
+	a)If the category doesn't match with the input file for given RollNo then validation error is given
+
+	b)If the Category is SC or ST and Cpi is less than 7 then a warning corresponding to ineligibility is given on clicking submit button
+
+	c)If the category is GE and CPI is less than 8 then the same warning is given.
+
+	d)Choices of 4 categories have been added so as to choose from them only
+
+
+10)Feature : Current Branch Warning for wrong data
+
+	---Test Cases:
+	a)If the Current Branch doesn't match with the input file for given RollNo then validation error is given
+
+	b)Choices are taken in from the input_programmes.csv given as input
+
+11)Feature : Preferences have been checked of the user according to some basic rules
+
+	---Test Cases:
+	a)If the Preference matches with the user's  current branch then error is raised on clicking save
+
+	b)If two of the user's preference turns out to be same then an error is raised on clicking save
+
+	c)If the user keeps a higher preference empty and fills in a lower preference then an error is given on clicking save
+
+12)Feature : Save Button is implemented for saving all the data of the user and validifies the form according to the errors mentioned above
+
+13)Feature : On clicking Save and with no errors the user is redirected to the list page which contains all his details lined out ,his personal details as well as his preferences.
+
+14)Feature : Warning is displayed on the main list data and the user data is saved into the database.
+
+
+15)Feature : We have implemented an Edit button to enable a user to edit his details .Like if he has changed his mind regarding the preferences then he can change it according to his wish.
+
+16)Feature : Django_admin can be logged into using url/admin. Various actions have been given to the admin.
+
+17)Feature : The privileges given to the admin are 
+
+	a)import_data : Removes the existing database and imports the data from the input given in order to make a new database. The author assigned to each is unique .
+
+	b)download_csv : Extracts the database into a csv file so that it can be operated on for applying algorithm.
+
+	c)Apply_algorithm : Applies the algorithm to the csv created from the database and generates an output.
+
+
+
+
+
+
