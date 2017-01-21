@@ -1,20 +1,3 @@
-Assignment 11 :
-Group No: 02
-Team Members:		CSE ID		Roll No.	Percentage Contribution
-Harshal Mahajan		harshal.m	140050003	100%
-Tanmay Parekh  		tanmayb         140100011	100%
-Navneet Agarwal		navneet		140100090	100%
-
-
-Honor Code: I  pledge on our own honour that I have not consulted or given any assistance to any group for this particular assignment.
-	    We have not copied or looked 
-
-	    I  pledge on our own honour that I have not consulted or given any assistance to any group for this particular assignment.
-	    We have not copied or looked 
-
-	    I  pledge on our own honour that I have not consulted or given any assistance to any group for this particular assignment.
-	    We have not copied or looked 
-
 Citations - 
 1. Django.project
 2. Djangogirlstutorial
